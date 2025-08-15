@@ -46,6 +46,7 @@
     "lucide-react": "^0.475.0",
     "next": "15.3.3",
     "patch-package": "^8.0.0",
+    "randomness-js": "^1.0.2",
     "react": "^18.3.1",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18.3.1",
@@ -57,13 +58,30 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@openzeppelin/contracts": "^5.0.2",
+    "@typechain/ethers-v6": "^0.5.0",
+    "@typechain/hardhat": "^9.0.0",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": "^10.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-syntax-highlighter": "^15.5.13",
+    "chai": "^4.2.0",
+    "ethers": "^6.4.0",
     "genkit-cli": "^1.14.1",
+    "hardhat": "^2.22.6",
+    "hardhat-gas-reporter": "^1.0.8",
     "postcss": "^8",
+    "solidity-coverage": "^0.8.0",
     "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.3.0",
     "typescript": "^5"
   }
 }
