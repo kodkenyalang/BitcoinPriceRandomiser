@@ -1,10 +1,8 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
-import { HardhatIcon } from '@/components/icons';
-import { Button } from '@/components/ui/button';
-import { useToast } from '@/hooks/use-toast';
 import {
   Card,
   CardContent,
@@ -13,6 +11,8 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
 import { Progress } from '@/components/ui/progress';
 
 import ContractABI from '../../ContractABI.json';
@@ -31,9 +31,9 @@ export default function Home() {
     const initializeContract = async () => {
       try {
         if (window.ethereum) {
-          const provider = new ethers.providers.Web3Provider(window.ethereum);
+          const provider = new ethers.BrowserProvider(window.ethereum);
           await provider.send('eth_requestAccounts', []);
-          const signer = provider.getSigner();
+          const signer = await provider.getSigner();
           const deployedContract = new ethers.Contract(
             contractAddress,
             ContractABI,
